@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: `/discover`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `The Avatar Assembly`,
+    description: `Holistic wellness through food, lifestyle and connection.`,
+    author: `Brent Arias`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
