@@ -6,7 +6,7 @@ module.exports = {
     description: `Holistic wellness through food, lifestyle and connection.`,
     author: `Brent Arias`,
     url: `https://avatarassembly.com`,
-    image: `/images/Hohenzollern-autumn-fog_1200x630.jpg`
+    image: `/images/Hohenzollern_morning_fog_zoom_540x281.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
