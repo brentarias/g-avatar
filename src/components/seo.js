@@ -66,7 +66,7 @@ function SEO({ description, lang, meta, title }) {
         // },
         {
           property: `og:image`,
-          content: socialBanner
+          content: `${site.siteMetadata.url}${socialBanner}`
         },
         {
           name: `twitter:card`,
