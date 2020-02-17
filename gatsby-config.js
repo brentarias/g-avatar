@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `The Avatar Assembly`,
     fullTitle: `The Avatar Assembly: Embracing Humanity`,
-    description: `Holistic wellness through food, lifestyle and connection.`,
+    description: `Holistic wellness through food, lifestyle, and connection.`,
     author: `Brent Arias`,
     url: `https://avatarassembly.com`,
     image: `/images/Hohenzollern_morning_fog_zoom_540x281.png`
