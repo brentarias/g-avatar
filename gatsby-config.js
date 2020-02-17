@@ -2,8 +2,11 @@ module.exports = {
   pathPrefix: `/discover`,
   siteMetadata: {
     title: `The Avatar Assembly`,
+    fullTitle: `The Avatar Assembly: Embracing Humanity`,
     description: `Holistic wellness through food, lifestyle and connection.`,
     author: `Brent Arias`,
+    url: `https://avatarassembly.com`,
+    image: `/images/Hohenzollern-autumn-fog_1200x630.jpg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
