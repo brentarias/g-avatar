@@ -9,8 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-//from here: https://stackoverflow.com/questions/50161794/using-gatsby-js-how-do-i-add-a-route-specific-ogimage-meta-tag
-import socialBanner from '../images/Hohenzollern-autumn-fog_1200x630.jpg'
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -60,13 +58,9 @@ function SEO({ description, lang, meta, title }) {
           property: `og:url`,
           content: site.siteMetadata.url,
         },
-        // {
-        //   property: `og:image`,
-        //   content: `${site.siteMetadata.url}${site.siteMetadata.image}`
-        // },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.url}${socialBanner}`
+          content: `${site.siteMetadata.url}${site.siteMetadata.image}`
         },
         {
           name: `twitter:card`,
@@ -86,8 +80,6 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
-      // <meta property="og:image" content={`${site.siteMetadata.url}${site.siteMetadata.image}`} />
-      // </Helmet>
   )
 }
 
