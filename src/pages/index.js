@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+//import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -120,7 +120,7 @@ export default class IndexPage extends React.Component {
                   <p className="text-muted mb-0">
                     The Assembly honors and shares all forms of healing:
                     kinesiology, acupuncture, meditation, Tai Chi, yoga, Reiki,
-                    chiropracty, massage, etcetera. Gifts of healing offered
+                    chiropractic, massage, etcetera. Gifts of healing offered
                     when we gather as a community strengthen our human bonds and
                     gratitude.
                   </p>
@@ -146,7 +146,7 @@ export default class IndexPage extends React.Component {
                     The investment into our own well-being is the catalyst for
                     the transcendence we desire. Each of us can touch positively
                     thousands, and yet together we witness the whole is greater
-                    than the sum of the parts. What we hold as our intention, we
+                    than the sum of the parts. What together we hold as our intention, we
                     accomplish!
                   </p>
                 </div>
@@ -155,12 +155,12 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="page-section bg-dark text-white" id="portfolio">
+        <section className="page-section bg-dark text-white" id="imagine">
           <div className="container text-center">
-            <h2 className="mb-4">Make today the day your life takes a new direction.</h2>
+            <h2 className="mb-4">Today, start a new direction in your life.</h2>
             <a
               className="btn btn-light btn-xl"
-              href="https://startbootstrap.com/themes/creative/"
+              href="mailto:barias@axiscode.com"
             >
               Contact Us
             </a>
@@ -170,7 +170,7 @@ export default class IndexPage extends React.Component {
         <section className="page-section" id="contact">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-8 text-center">
+              <div className="col-lg-6 text-center">
                 <h2 className="mt-0">Let's Get In Touch!</h2>
                 <hr className="divider my-4" />
                 <p className="text-muted mb-5">
