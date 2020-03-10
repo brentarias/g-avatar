@@ -6,10 +6,10 @@ import Img from "gatsby-image"
 import "./carousel.scss"
 
 const PortfolioCarousel = ({ images, current }) => {
-  const carouselItems = images.map((image, index) =>
+  const carouselItems = images.map((node, index) =>
     <Carousel.Item key={index}>
       <figure>
-        <Img fluid={image.node.childImageSharp.fluid}/>
+        <Img fluid={node.image.childImageSharp.max}/>
         <figcaption>
           <div className="bottom-bar">
             <div className="counter">{index + 1} of {images.length}</div>

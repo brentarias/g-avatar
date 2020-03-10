@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-//import Img from "gatsby-image"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,6 +33,8 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
+    const dreams = this.props.data.dreams.nodes
+
     return (
       <Layout>
         <SEO title="Home" />
@@ -146,8 +148,8 @@ export default class IndexPage extends React.Component {
                     The investment into our own well-being is the catalyst for
                     the transcendence we desire. Each of us can touch positively
                     thousands, and yet together we witness the whole is greater
-                    than the sum of the parts. What together we hold as our intention, we
-                    accomplish!
+                    than the sum of the parts. What together we hold as our
+                    intention, we accomplish!
                   </p>
                 </div>
               </div>
@@ -155,12 +157,40 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="page-section bg-dark text-white" id="imagine">
+        <section id="portfolio">
+          <div className="container-fluid p-0">
+            <div className="row no-gutters">
+              {dreams.map((dream, index) => {
+                return (
+                  <div className="col-lg-4 col-sm-6">
+                    <a
+                      className="portfolio-box"
+                      href={dream.image.publicURL}
+                      onClick={this.handlePortfolioClick.bind(this, index)}
+                    >
+                      <Img
+                        fluid={dream.image.childImageSharp.fluid}
+                      />
+                      <div className="portfolio-box-caption">
+                        <div className="project-category text-white-50">
+                          {dream.title}
+                        </div>
+                        <div className="project-name">{dream.description}</div>
+                      </div>
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="page-section bg-dark text-white" id="connect">
           <div className="container text-center">
-            <h2 className="mb-4">Today, start a new direction in your life.</h2>
+            <h2 className="mb-4">Start a new direction in your life, today.</h2>
             <a
               className="btn btn-light btn-xl"
-              href="mailto:barias@axiscode.com"
+              href="mailto:avatar.within@gmail.com"
             >
               Contact Us
             </a>
@@ -174,9 +204,8 @@ export default class IndexPage extends React.Component {
                 <h2 className="mt-0">Let's Get In Touch!</h2>
                 <hr className="divider my-4" />
                 <p className="text-muted mb-5">
-                  Ready to start a new future with us? Give us a call or
-                  send us an email and we will get back to you as soon as
-                  possible!
+                  Ready to start a new future with us? Give us a call or send us
+                  an email and we will get back to you as soon as possible!
                 </p>
               </div>
             </div>
@@ -187,8 +216,8 @@ export default class IndexPage extends React.Component {
               </div>
               <div className="col-lg-4 mr-auto text-center">
                 <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:contact@yourwebsite.com">
-                  contact@yourwebsite.com
+                <a className="d-block" href="mailto:avatar.within@gmail.com">
+                  avatar.within@gmail.com
                 </a>
               </div>
             </div>
@@ -199,7 +228,7 @@ export default class IndexPage extends React.Component {
           onHide={() => this.setModal(false, 0)}
         >
           <PortfolioCarousel
-            images={this.props.data.images.edges}
+            images={dreams}
             current={this.state.modalCurrent}
           />
         </PortfolioModal>
@@ -211,13 +240,18 @@ export default class IndexPage extends React.Component {
 
 export const imageData = graphql`
   query {
-    images: allFile(filter: {relativePath: {glob: "portfolio/fullsize/*.jpg"}}, sort: {fields: name}) {
-      edges {
-        node {
+    dreams: allDreamsJson {
+      nodes {
+        title
+        description
+        image {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1200, maxHeight: 818) {
               ...GatsbyImageSharpFluid
             }
+            max: fluid {
+              ...GatsbyImageSharpFluid
+            }          
           }
         }
       }
