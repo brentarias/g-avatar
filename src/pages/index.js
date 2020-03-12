@@ -85,8 +85,8 @@ export default class IndexPage extends React.Component {
                   and experience in diet, lifestyle and self-awareness. The
                   graduates from the Avatar Integration are then eligible to
                   join or form micro-communities, each an Avatar Circle. Each
-                  Circle meets regularly at a natural cadence (from monthly, to
-                  weekly) and are the venue for true food, beauty (music, song,
+                  Circle meets regularly at a natural cadence (from monthly to
+                  weekly) and is the venue for true food, beauty (music, song,
                   dance) and healing modalities. Each Circle then gathers its
                   strength to deliver with power to a worthy public cause; the
                   good that we have we must share as a light to others.
